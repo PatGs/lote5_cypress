@@ -1,0 +1,26 @@
+{
+  "name": "lote5_cypress",
+  "version": "1.0.0",
+  "description": "Automation of forms for all LPs of the construction company Lote5's projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatGs/lote5_cypress.git"
+  },
+  "author": "Patrícia Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatGs/lote5_cypress/issues"
+  },
+  "homepage": "https://github.com/PatGs/lote5_cypress#readme",
+  "keywords": [],
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  },
+  "dependencies": {
+    "lote5_cypress": "file:"
+  }
+}
