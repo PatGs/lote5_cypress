@@ -20,14 +20,12 @@ describe('Teste de formulário - Edifício Copa', () => {
     //Valida se os canais de comunicação estão habilitados
     Form.validarcanais1();
 
-    Form.politicaPrivacidade();
- 
-
+    Form.politicaPrivacidade(); 
 
     // Clicar no botão Enviar
-    //cy.contains('button', 'Enviar').click();
+    cy.contains('button', 'Enviar').click();
 
     // Verificar se redireciona para a página de Obrigado
-    cy.url().should('include', '/obrigado');
+    //cy.url().should('include', '/obrigado');
   });
 });

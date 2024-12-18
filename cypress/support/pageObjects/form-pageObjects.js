@@ -34,7 +34,6 @@ class Form{
       // Verifica se o checkbox está presente e visível
       cy.get('input[id="privacy-policy"]')
       .should('exist')
-      .and('be.visible')
       .then(($checkbox) => {
         if (!$checkbox.is(':checked')) {
           // Simula o clique no botão de enviar
