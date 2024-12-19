@@ -9,7 +9,8 @@ class Form{
 
     validarcanais1() {
         // Verifica o título da seção
-        cy.get('.contact__form__contact-preference__title').should('contain', 'Como prefere ser contactado?');
+        cy.get('.contact__form__contact-preference__title')
+          .should('contain', 'Como prefere ser contactado?');
       
         // Lista de canais
         const canais = ['E-mail', 'WhatsApp', 'Telefone'];      
@@ -49,9 +50,6 @@ class Form{
       });
     }
 
-
-}
-    
-
+}  
 
 export default new Form();

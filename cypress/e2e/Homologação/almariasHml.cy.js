@@ -1,5 +1,3 @@
-import Form from '../support/pageObjects/form-pageObjects'
-
 describe('Teste de formulário - Almarias', () => {
   it('Preencher formulário e verificar redirecionamento para a página de Obrigado', () => {
     // Acessar a página Homolog
@@ -10,7 +8,6 @@ describe('Teste de formulário - Almarias', () => {
     //Clica no botão Descubra Almarias e ancora para o Formulário
     cy.contains('button', 'Descubra Almarias')
       .click();
-
 
     // Preencher o formulário
     cy.get('#InputNome1').type('Teste Desconsiderar');
@@ -33,8 +30,13 @@ describe('Teste de formulário - Almarias', () => {
     // Clicar no botão de enviar
     cy.get('#btnEnviar').click();
 
-    // Verificar se redireciona para a página de Obrigado
-    // cy.url().should('include', 'https://almarias.devhagens.com.br/obrigado');
-    // cy.contains('button', 'Voltar ao site').click();
+    // Capturar o alerta de envio do formulário para o teste em Homolog
+    cy.on('window:alert', (alertText) => {
+      expect(alertText).to.equal('Erro ao enviar!')
+    });
+
+    // Verificar se redireciona para a página de Obrigado HOmolog
+    cy.url().should('include', 'https://almarias.devhagens.com.br/obrigado');
+    cy.contains('button', 'Voltar ao site').click();
   });
 });
